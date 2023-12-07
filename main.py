@@ -5,7 +5,7 @@ class Tag:
         self.height = height
         Tag.count += 1
     def __str__(self):
-        print(f"===== {self.name}.\n===== {self.height}")
+        return f"===== {self.name}.\n===== {self.height}"
 
     def __del__(self):
         print("eee12233e")
