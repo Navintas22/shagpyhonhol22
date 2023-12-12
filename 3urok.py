@@ -27,6 +27,7 @@ class Human:
             print(f"За столь большую работу вы получаете аудиенцию с самим Си Цзиньпином!")
         self.money += money
         self.enjoyment -= 5
+
     def chill(self):
         print("Отдыхаем")
         enjoyment = random.randint(3, 8)
@@ -35,13 +36,18 @@ class Human:
 
     def shopping(self):
         print("Вы пошли скупиться в магазин за продуктами и не только(партии всё-равно, мягко говоря)")
-        money = random.randint(10, 25)
+        money = random.randint(3, 10)
+        enjoyment = random.randint(5, 15)
         print(f"Вы потратили {money} мексиканских песо, зато у вас теперь дома есть что покушать(наверное)")
-        self.money += money
-        self.enjoyment -= 5
+        self.money -= money
+        self.enjoyment += enjoyment
 
     def clean_house(self):
-        pass
+        print("Вы чистите дом(партия одобряет).")
+        musor = random.randint(3, 8)
+        enjoyment = random.randint(5, 10)
+        print(f"Вы почистили дом и убрали {musor}кг мусора!")
+        self.enjoyment -= enjoyment
 
     def life(self):
         pass
