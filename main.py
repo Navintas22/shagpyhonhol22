@@ -1,7 +1,7 @@
 class Tag:
     count = 0
     def __init__(self, name="nanana", height=160):
-        self.name=name
+        self.name = name
         self.height = height
         Tag.count += 1
     def __str__(self):
