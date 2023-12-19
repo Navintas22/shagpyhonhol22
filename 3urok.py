@@ -36,7 +36,7 @@ class Human:
         self.enjoyment += enjoyment
 
     def shopping(self):
-        print("Вы пошли скупиться в магазин за продуктами и не только(партии всё-равно, мягко говоря)")
+        print("Вы пошли скупиться в магазин за продуктами и не только(партии всё-равно)")
         money = random.randint(3, 10)
         enjoyment = random.randint(5, 15)
         foodyha = random.randint(5, 10)
@@ -67,6 +67,19 @@ class Human:
         elif r == 3:
             self.clean_house()
         else:
+            self.shopping()
+
+        if self.money < 20:
+            self.work()
+
+        if self.enjoyment < 15:
+            self.chill()
+
+        if self.money > 500:
+            self.car = Car("LEOPARD")
+            self.money -= 500
+
+        if self.home.food < 5:
             self.shopping()
 
 
